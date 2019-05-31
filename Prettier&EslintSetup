@@ -1,0 +1,55 @@
+npm install -D prettier
+create at root project directory a file .prettierrc
+  inside .prettierrc add 
+    {} // empty object so vscode will see prettier is installed. 
+   
+   install prettier extension for vscode 
+    in user setting 
+      "prettier.requireConfig": true
+      "formatOnSave": true
+      
+    
+   inside package.json 
+    "scripts": {
+    "format": "prettier --write \"src/**/*.{js, jsx, css, json}\"",
+    
+    
+eslint -- stylist choice
+prettier -- formatter choice
+
+inside root project directory create 
+  .eslintrc.json
+    {
+    "extends": [
+        "eslint: recommended", 
+        "prettier", 
+        "prettier/react"
+    ], 
+    "parserOptions": {
+        "ecmaVersion":2019, 
+        "sourceType": "module", 
+        "ecmaFeatures": {
+            "jsx": true
+        } 
+
+    }, 
+    "env": {
+        "es6": true, 
+        "browser": true, 
+        "node": true
+    }
+}
+
+npm install -D eslint eslint-config-prettier eslint-plugin-prettier
+
+add linting in package.json under script 
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js, jsx, css, json}\"",
+    "lint": "eslint \"**/*.{js, jsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  /* global React ReactDOM */
+  install eslint extension for vscode 
+ for debuggin eslint 
+ npm run lint -- --debug
