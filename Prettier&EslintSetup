@@ -58,3 +58,25 @@ add linting in package.json under script
 npm install -D parcel-bundler
 in package.json 
   "dev": "parcel src/index.html"
+  
+  
+// .babelrc - root project folder
+// for react -> removing constructor in class 
+{
+    "presets": [
+        "react", 
+        [
+            "env", 
+            {  
+                "targets": {
+                    "browsers": ["last 2 versions"]
+                }
+            }
+        ]
+    ], 
+    "plugins": ["transform-class-properties"]
+}
+
+// Add parcer in eslintrc.json 
+    "parser": "babel-eslint",
+
