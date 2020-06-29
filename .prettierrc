@@ -1,0 +1,4 @@
+-- npm install --global prettier
+-- after downloading prettier extension for vscode. change user settings for prettier to prettier.requireConfig to true and editor.formatOnSave to true.
+
+{}
